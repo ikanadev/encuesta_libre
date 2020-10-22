@@ -1,0 +1,165 @@
+:root {
+    --green: #548C2F;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik';
+    color: #4a4a4a;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #fff 0%, #e0e0e0 100%);
+}
+.content {
+    flex: 1;
+    min-height: 80vh;
+    max-width: 1200px;
+    padding: 30px;
+    box-shadow: 3px 3px 3px 0px #23232344, 0 0 5px 0 #23232388;
+    border-radius: 7px;
+    background: #fff;
+}
+.title {
+    text-align: center;
+    font-family: 'Bellota';
+    font-weight: 800;
+    color: var(--green);
+    margin-bottom: 25px;
+}
+.pregunta-form {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+.options-cont {
+    display: flex;
+    flex-direction: column;
+}
+.option {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.option input, .pregunta-form > div > input {
+    flex: 4;
+    outline: none;
+    border: 0;
+    padding: 3px;
+    border-bottom: 1px solid #888;
+    font-size: 16px;
+}
+.option label, .pregunta-form > div > label {
+    flex: 1;
+    text-align: right;
+    padding-right: 8px;
+    font-size: 16px;
+}
+.pregunta-form button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+.opcion-boton {
+    align-self: center;
+}
+.enviar {
+    background-color: #88d;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+}
+/* INDEX */
+.index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.index > p {
+    text-align: center;
+    margin-bottom: 35px;
+}
+.list-cont {
+    min-width: 600px;
+    display: flex;
+    margin-bottom: 12px;
+}
+.list-cont ul {
+    list-style: none;
+    width: 100%;
+}
+.list-cont ul li {
+    margin-bottom: 8px;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    padding: 5px 8px;
+    transition: all .5s;
+}
+.list-cont ul li:hover {
+    background: #66996622;
+}
+.list-cont ul li a{
+    flex: 1;
+    color: var(--green);
+}
+.list-cont ul li span {
+    font-size: 16px;
+}
+/* RESULTADOS */
+.resultados h2 {
+    font-family: 'Bellota';
+    color: var(--green);
+    margin-top: 12px;
+}
+.res-cont {
+    display: flex;
+    width: 400px;
+}
+.res-cont p {
+    flex: 1;
+}
+.res-cont span {
+    font-size: 22px;
+}
+#votar-form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+#votar-form > form {
+    display: flex;
+    flex-direction: column;
+}
+#votar-form > form > div {
+    display: flex;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+#votar-form > form > div > input {
+    width: 40px;
+}
+#votar-form > form > button, #show-form {
+    border: 0;
+    padding: 8px 12px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+    background: #669966;
+}
+#hide-form {
+    background: #ccc !important;
+    color: #444 !important;
+}
+
+

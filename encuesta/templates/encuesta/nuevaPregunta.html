@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <h1 class="title">Registrar Nueva Pregunta</h1>
+    <form method="post" class="pregunta-form" action="{% url 'encuesta:nueva_pregunta' %}">
+        {% csrf_token %}
+        <div class="option">
+            <label for="pregunta">Pregunta:</label>
+            <input id="pregunta" name="texto_pregunta" type="text" />
+        </div>
+        <input type="hidden" name="nro_opciones" value="2" />
+        <div class="options-cont">
+            <div class="option">
+                <label for="option-1">Opción 1:</label>
+                <input id="option-1" name="opcion_1" type="text" />
+            </div>
+            <div class="option">
+                <label for="option-2">Opción 2:</label>
+                <input id="option-2" name="opcion_2" type="text" />
+            </div>
+        </div>
+        <button type="button" class="opcion-boton">Agregar Opcion</button>
+        <button type="submit" class="enviar">Registrar</button>
+    </form>
+    </div>
+</div>
+{% endblock %}

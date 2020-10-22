@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="index">
+    <h1 class="title">Responder preguntas</h1>
+    <p>
+        Seleccione una pregunta y responda, o también puede 
+        <a href="{% url 'encuesta:pregunta_form' %}"> Crear una pregunta. </a>
+    </p>
+    <div class="list-cont">
+        <ul>
+        {% for pregunta in object_list %}
+            <li>
+                <a href="{% url 'encuesta:results' pregunta.id %}">{{ pregunta.pregunta }}</a>
+                <span>{{ pregunta.fecha|date }}</span>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

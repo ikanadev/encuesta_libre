@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="resultados">
+    <h1 class="title">{{ object.pregunta }}</h1>
+    <h2>Respuestas: </h2>
+    {% for opcion in object.opcion_set.all %}
+    <div class="res-cont">
+        <p>{{ opcion.texto }}</p>
+        <span>{{ opcion.votos }}</span>
+    </div>
+    {% endfor %}
+    <div id="votar-form">
+        <h2>Votar</h2>
+        <form method="post" action="{% url 'encuesta:nuevo_voto' object.id %}">
+            {% csrf_token %}
+            {% for opcion in object.opcion_set.all %}
+            <div>
+                <input
+                    type="radio"
+                    name="opcion"
+                    id="opcion{{ forloop.counter }}"
+                    value="{{ opcion.id }}"
+                />
+                <label for="opcion{{ forloop.counter }}">
+                    {{ opcion.texto }}
+                </label>
+            </div>
+            {% endfor %}
+            <button type="button" id="hide-form">Cancelar</button>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <div id="votar-button">
+        <button id="show-form">Votar</button>
+    </div>
+</div>
+{% endblock %}

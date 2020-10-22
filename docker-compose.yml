@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  encuestalibredb:
+    image: postgres:10
+    container_name: encuestalibredb
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=12345
+      - POSTGRES_DB=encuestalibre
+    ports:
+      - "5432:5432"
+    networks:
+      - openinfonet
+networks:
+  openinfonet:
+    driver: bridge

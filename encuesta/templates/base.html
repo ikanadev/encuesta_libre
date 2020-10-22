@@ -1,0 +1,19 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Encuesta Libre</title>
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Bellota:wght@400;700&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <div class="content">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </main>
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>
